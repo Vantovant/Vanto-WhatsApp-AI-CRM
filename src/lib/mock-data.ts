@@ -652,6 +652,10 @@ export const getActivitiesForContact = (contactId: string): Activity[] => {
   return mockActivities.filter((a) => a.contact_id === contactId);
 };
 
+export const getNotesForContact = (contactId: string): any[] => {
+  return [];
+};
+
 export const getOrdersForContact = (contactId: string): Order[] => {
   return mockOrders.filter((o) => o.contact_id === contactId);
 };

@@ -1,70 +1,36 @@
-# Vanto Command Hub - Development Tracker
+# Vanto WhatsApp AI CRM - Development Tracker
 
-## Phase 1: Foundation
-- [x] Project setup with Next.js + shadcn/ui
-- [x] Install required shadcn components
-- [x] Set up dark theme with teal/cyan accents
-- [x] Create mock database structure
-- [x] Build authentication flow (simulated)
+## ✅ Completed - Supabase Integration for Contacts
 
-## Phase 2: Core Layout
-- [x] Main app layout with sidebar navigation
-- [x] Collapsible sidebar
-- [x] User profile menu
+### Contacts Module - Fully Integrated with Supabase
+- [x] Connected to Supabase project (nvifliqfgtxqmnkfkhhi.supabase.co)
+- [x] Updated API key (sb_publishable_1tf2ICCTfnM7GKviG91LWA_lkeC1Fr3)
+- [x] Real-time sync enabled for contacts table
+- [x] CRUD operations using Supabase:
+  - [x] getContacts() - fetch all contacts
+  - [x] createContact() - add new contact
+  - [x] updateContact() - modify contact
+  - [x] deleteContact() - remove contact
+- [x] CSV import creates records in Supabase
+- [x] CSV export works with Supabase data
+- [x] Bulk delete removes from Supabase
+- [x] Real-time updates via Supabase channels
 
-## Phase 3: Inbox Module
-- [x] Chat list panel with filters
-- [x] Conversation thread panel
-- [x] Contact info right panel
-- [x] Message composer
-- [x] Filters and search
-- [x] AI suggestions integration
+### Other Modules (Not Modified - As Requested)
+- [ ] Inbox module (still uses mock data)
+- [ ] CRM module (still uses mock data)
+- [ ] AI Agent module (still uses mock data)
+- [ ] Workflows module (still uses mock data)
+- [ ] Automations module (still uses mock data)
 
-## Phase 4: CRM Module
-- [x] Kanban pipeline view
-- [x] Drag-and-drop cards between stages
-- [x] Contact cards with tags and stages
-- [x] Table view placeholder
+### Database Schema
+The contacts table schema is defined in `src/lib/database.types.ts`:
+- Full CRM contact fields (lead_temperature, lead_type, etc.)
+- Integration ready for orders and activities tables
+- WhatsApp-specific fields (chats, messages)
 
-## Phase 5: Automations Engine
-- [x] Workflow cards with status
-- [x] Toggle active/inactive
-- [x] Trigger/action indicators
-
-## Phase 6: AI Agent Module
-- [x] Unreplied chats detection
-- [x] AI suggestions with approve/send
-- [x] Sentiment analysis display
-- [x] Auto-send toggle
-- [x] Intent detection with confidence scores
-- [x] Auto-labeling based on intent
-- [x] Batch processing (process all)
-- [x] Tabs for organized UI (Suggestions/Analysis/Actions)
-
-## Phase 7: Additional Modules
-- [x] Integrations console with webhooks
-- [x] API console with keys and logs
-- [x] Settings with team & roles
-
-## Phase 8: Workflow Builder
-- [x] Visual workflow editor
-- [x] Node palette (triggers, conditions, actions)
-- [x] Workflow list sidebar
-
-## Phase 9: New Features (Added)
-- [x] Login page with authentication
-- [x] Session management (localStorage)
-- [x] Toast notifications (sonner)
-- [x] CSV import functionality
-- [x] CSV export functionality
-- [x] Import preview dialog
-- [x] Bulk delete contacts
-- [x] Drag-and-drop for CRM Kanban
-
-## Completed Features Summary
-All 5 requested features have been implemented:
-1. ✅ Real-time notification system with toast messages
-2. ✅ Drag-and-drop functionality for Kanban cards
-3. ✅ CSV import/export functionality for contacts
-4. ✅ Login/authentication page with session management
-5. ✅ Enhanced AI agent features (auto-labeling, intent detection)
+## Next Steps (Optional)
+- Integrate other modules with Supabase
+- Set up Supabase authentication
+- Create database migrations
+- Add Row Level Security (RLS) policies

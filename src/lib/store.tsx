@@ -63,7 +63,7 @@ interface AppState {
 const AppContext = createContext<AppState | null>(null);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [activeModule, setActiveModule] = useState('inbox');
+  const [activeModule, setActiveModule] = useState('contacts');
   const [selectedChatId, setSelectedChatId] = useState<string | null>('chat-1');
   const [selectedContactId, setSelectedContactId] = useState<string | null>(null);
   const [contacts, setContacts] = useState<Contact[]>(mockContacts);

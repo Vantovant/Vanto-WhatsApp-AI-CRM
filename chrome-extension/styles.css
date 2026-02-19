@@ -1,0 +1,303 @@
+/* Vanto CRM Sidebar */
+.vanto-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100vh;
+  background: #1e1e1e;
+  color: #e4e4e4;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.vanto-sidebar.collapsed {
+  transform: translateX(340px);
+}
+
+.vanto-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #2a2a2a;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.vanto-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vanto-logo-icon {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.vanto-logo-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.vanto-toggle {
+  background: transparent;
+  border: none;
+  color: #a0a0a0;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.vanto-toggle:hover {
+  background: #3a3a3a;
+  color: #fff;
+}
+
+.vanto-sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Tabs */
+.vanto-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.vanto-tab {
+  background: transparent;
+  border: none;
+  color: #a0a0a0;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.vanto-tab:hover {
+  color: #fff;
+}
+
+.vanto-tab.active {
+  color: #14b8a6;
+  border-bottom-color: #14b8a6;
+}
+
+/* Tab Content */
+.vanto-tab-content.hidden {
+  display: none;
+}
+
+/* Contact Info */
+.vanto-contact-info {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 20px;
+}
+
+.vanto-contact-avatar {
+  margin: 0 auto 12px;
+  width: 64px;
+  height: 64px;
+}
+
+.vanto-avatar-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.vanto-contact-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #fff;
+}
+
+.vanto-contact-phone {
+  font-size: 14px;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+/* Section */
+.vanto-section {
+  margin-bottom: 20px;
+}
+
+.vanto-section h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 12px 0;
+}
+
+/* Form Fields */
+.vanto-field {
+  margin-bottom: 16px;
+}
+
+.vanto-field label {
+  display: block;
+  font-size: 13px;
+  color: #a0a0a0;
+  margin-bottom: 6px;
+}
+
+.vanto-input,
+.vanto-select,
+.vanto-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.vanto-input:focus,
+.vanto-select:focus,
+.vanto-textarea:focus {
+  outline: none;
+  border-color: #14b8a6;
+}
+
+.vanto-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button */
+.vanto-btn {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vanto-btn-primary {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  color: white;
+}
+
+.vanto-btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.vanto-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Notes List */
+.vanto-notes-list,
+.vanto-activity-list {
+  margin-top: 16px;
+}
+
+.vanto-empty {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  padding: 40px 20px;
+}
+
+/* Note Item */
+.vanto-note-item {
+  background: #2a2a2a;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.vanto-note-item p {
+  margin: 0 0 8px 0;
+  color: #e4e4e4;
+  font-size: 14px;
+}
+
+.vanto-note-item .vanto-note-meta {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Activity Item */
+.vanto-activity-item {
+  background: #2a2a2a;
+  border-left: 3px solid #14b8a6;
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.vanto-activity-item .vanto-activity-type {
+  font-size: 12px;
+  color: #14b8a6;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.vanto-activity-item p {
+  margin: 0;
+  color: #e4e4e4;
+  font-size: 14px;
+}
+
+.vanto-activity-item .vanto-activity-time {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Scrollbar */
+.vanto-sidebar-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.vanto-sidebar-content::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.vanto-sidebar-content::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 3px;
+}
+
+.vanto-sidebar-content::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}

@@ -36,7 +36,7 @@ export function MainLayout() {
       case 'settings':
         return <SettingsModule />;
       default:
-        return <InboxModule />;
+        return <ContactsModule />;
     }
   };
 
